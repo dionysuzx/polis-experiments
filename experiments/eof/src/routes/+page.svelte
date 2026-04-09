@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   import { config } from '../config';
 
   let expandedSection: string | null = null;
@@ -52,7 +53,7 @@
       <div class="accordion-content" style="max-height: {expandedSection === 'what' ? '500px' : '0'}">
         <p>{config.whatIs}</p>
         <div class="education-diagram">
-          <img src="/{config.educationDiagramName}" alt="{config.topic} Structure Diagram" />
+          <img src="{base}/{config.educationDiagramName}" alt="{config.topic} Structure Diagram" />
           <div class="image-credit">Image source: <a href="{config.imageCreditLink}" target="_blank">{config.imageCreditText}</a></div>
         </div>
         <p class="learn-more">Want to learn more? Check out this <a href="{config.learnMoreLink}" target="_blank">{config.learnMoreText}</a>.</p>

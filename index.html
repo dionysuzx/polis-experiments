@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polis Experiments</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'JetBrains Mono', monospace, 'Segoe UI', Roboto, sans-serif;
+      background-color: #0a0d14;
+      color: #ecf0ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(62, 221, 189, 0.3);
+    }
+    h1 span { color: #3eddbd; }
+    .subtitle {
+      color: rgba(236, 240, 255, 0.6);
+      font-size: 1rem;
+      margin-bottom: 3rem;
+    }
+    .experiments {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 800px;
+    }
+    a.card {
+      display: block;
+      background: rgba(25, 30, 45, 0.8);
+      border: 1px solid rgba(62, 221, 189, 0.3);
+      border-radius: 8px;
+      padding: 30px 40px;
+      text-decoration: none;
+      color: #ecf0ff;
+      transition: all 0.3s ease;
+      min-width: 280px;
+      text-align: center;
+    }
+    a.card:hover {
+      background: rgba(35, 40, 55, 0.9);
+      box-shadow: 0 0 30px rgba(62, 221, 189, 0.2);
+      border-color: #3eddbd;
+      transform: translateY(-2px);
+    }
+    a.card h2 {
+      color: #3eddbd;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    a.card p {
+      color: rgba(236, 240, 255, 0.7);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(62, 221, 189, 0.1);
+      color: #3eddbd;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(62, 221, 189, 0.3);
+    }
+    footer {
+      margin-top: 4rem;
+      color: rgba(236, 240, 255, 0.4);
+      font-size: 0.8rem;
+    }
+    footer a {
+      color: rgba(236, 240, 255, 0.6);
+      text-decoration: none;
+    }
+    footer a:hover { color: #3eddbd; }
+  </style>
+</head>
+<body>
+  <h1><span>Polis</span> Experiments</h1>
+  <p class="subtitle">Ethereum social experiments using Polis</p>
+
+  <div class="experiments">
+    <a class="card" href="./native-rollups/">
+      <div class="badge">Active</div>
+      <h2>Native Rollups</h2>
+      <p>Should L2s inherit L1 security through native execution? Join the conversation.</p>
+    </a>
+
+    <a class="card" href="./eof/">
+      <div class="badge">Archive</div>
+      <h2>EOF</h2>
+      <p>EVM Object Format — the original Polis experiment on a contentious Ethereum upgrade.</p>
+    </a>
+  </div>
+
+  <footer>
+    <a href="https://github.com/dionysuzx/polis-experiments">GitHub</a>
+  </footer>
+</body>
+</html>

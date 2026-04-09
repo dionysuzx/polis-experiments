@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glowing background -->
+  <rect x="2" y="2" width="28" height="28" rx="8" fill="#0a0d14" stroke="#3eddbd" stroke-width="2"/>
+  
+  <!-- EOF text with cyberpunk style -->
+  <text x="16" y="21" font-family="monospace" font-size="12" font-weight="bold" fill="#3eddbd" text-anchor="middle" filter="url(#glow)">
+    EOF
+  </text>
+  
+  <!-- Glow filter -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg> 

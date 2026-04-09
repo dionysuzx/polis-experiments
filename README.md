@@ -1,37 +1,32 @@
-# Ethereum Polis Conversation Template
+# Polis Experiments
 
-A template for creating Polis conversations about Ethereum topics.
+Ethereum social experiments using [Polis](https://compdemocracy.org/Polis/) to find common ground on contentious topics.
 
-## Customizing for Your Topic
+## Experiments
 
-To create a new conversation about a different Ethereum topic:
+| Experiment | Status | Polis Link |
+|---|---|---|
+| [Native Rollups](experiments/native-rollups/) | Active | [Join](https://dionysuzx.github.io/polis-experiments/native-rollups/) |
+| [EOF](experiments/eof/) | Archive | [View](https://dionysuzx.github.io/polis-experiments/eof/) |
 
-- [ ] Update your configuration in `./src/config.ts`.
-- [ ] Update the images:
-  - [ ] Open Graph image in `./static/og-image.png`
-  - [ ] Educational diagram in `./static/educational-diagram.png`
-  - [ ] Favicon in `./static/favicon.svg`
+## Adding a New Experiment
+
+1. Copy an existing experiment folder
+2. Update `src/config.ts` with your topic, description, and Polis conversation ID
+3. Replace static assets (diagram, og-image, favicon)
+4. Add a build step in `.github/workflows/deploy.yml`
 
 ## Development
 
-Once you've customized the configuration, start a development server:
-
 ```bash
-bun install    # Install dependencies (first time only)
-bun dev        # Start development server
+cd experiments/native-rollups  # or experiments/eof
+bun install
+bun dev
 ```
 
-## Building and Deployment
+## Deployment
 
-To create a production version of your app:
-
-```bash
-bun run build
-```
-
-You can preview the production build with `bun run preview`.
-
-The site is designed to be easily deployed to Cloudflare Pages or any similar static hosting service.
+Deployed automatically to GitHub Pages on push to `main`.
 
 ## License
 
